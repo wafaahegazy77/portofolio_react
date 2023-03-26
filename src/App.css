@@ -479,4 +479,10 @@ form textarea {
     .skills-sec .react-multiple-carousel__arrow--left {
         left: 35%;
     }
- 
+    .projects-sec .nav-link {
+        padding: 0.9rem 0.8rem;
+        margin: 0 5px;
+        font-size: 14px;
+        min-width: fit-content !important;
+    }
+}

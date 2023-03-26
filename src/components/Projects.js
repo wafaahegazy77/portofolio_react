@@ -97,4 +97,8 @@ const Projects = () => {
                 </Tab.Container>
        
             </Container>
-        
+        </section>
+    )
+}
+
+export default Projects;
