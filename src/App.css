@@ -1,0 +1,482 @@
+/**********************************************
+    Start Public Style
+**********************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #e76f62;
+    --secondary: #3C3B5A ;
+    /* --filterPrimary: invert(0%) sepia(100%) saturate(19%) hue-rotate(19deg) brightness(101%) contrast(106%);
+    --filterSecondary: invert(0%) sepia(100%) saturate(19%) hue-rotate(19deg) brightness(101%) contrast(106%); */
+    --filterWhite: invert(99%) sepia(0%) saturate(4787%) hue-rotate(41deg) brightness(127%) contrast(96%);
+}
+  
+* {
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+*::-moz-selection {
+    background-color: var(--primary);
+    color: #fff;
+}
+  
+*::selection {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 8px;
+}
+
+
+p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7rem;
+}
+  
+a {
+    color: #000;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-decoration: none !important;
+}
+  
+a:hover {
+    color: var(--primary) !important;
+}
+  
+a:focus {
+    outline: 0;
+}
+
+
+.color-primary {
+    color: var(--primary);
+}
+/**********************************************
+    Start Public Classes
+**********************************************/
+.section {
+    position: relative;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+
+.butn {
+    position: relative;
+    padding: .7rem 1.7rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-weight: bold;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.butn.primary_butn {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+
+.butn.primary_border_butn {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+
+.butn:hover {
+  background-color: #b54033;
+  border: 1px solid #b54033;
+  color: #fff !important;
+}
+
+form .form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    border: 1px solid var(--primary) !important;
+}
+
+form input ,
+form select {
+    height: 60px;
+}
+
+form textarea {
+    resize: none;
+}
+/**********************************************
+   Start Edit Navbar
+**********************************************/
+.navbar {
+    padding: 1.15rem 0;
+    background-color: var(--secondary);
+    position: fixed !important;
+    top: 0;
+    z-index: 99999;
+    transition: all .3s linear;
+    width: 100%;
+}
+.navbar.scrolled {
+    background-color: rgba(60, 59, 90, .95);
+    box-shadow: 3px 6px 10px 0 #0001;
+}
+.navbar  .navbar-link {
+    color: #f5f5f5;
+    margin: 0 10px  ;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+.navbar  .navbar-link.active {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+.navbar .social_links a {
+    color: #fff;
+    margin-inline-end: 15px;
+    font-size: 25px;
+}
+.navbar .social_links a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-toggler {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(221, 221, 221, 0.3);
+    border: none;
+    position: relative;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    -webkit-box-shadow: 0px 0px 0px grey;
+            box-shadow: 0px 0px 0px grey;
+    background: rgba(0, 0, 0, 0);
+}
+  
+.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    top: 0px !important;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+  
+.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    top: 0px !important;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+}
+  
+.navbar .navbar-toggler .navbar-toggler-icon {
+    width: 25px;
+    height: 2px;
+    background: var(--primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+  
+.navbar .navbar-toggler .navbar-toggler-icon::after, 
+.navbar .navbar-toggler .navbar-toggler-icon::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: var(--primary);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+.navbar .navbar-toggler .navbar-toggler-icon::after {
+    top: -6px;
+    right: 0px;
+}
+  
+.navbar .navbar-toggler .navbar-toggler-icon::before {
+    top: 6px;
+    right: 0px;
+}
+  
+
+/**********************************************
+   Start Edit header
+**********************************************/
+.header {
+    padding-top: 100px;
+    background-color: var(--secondary);
+}
+
+.header .text_box .title {
+    height: 120px;
+    overflow: hidden;
+    font-size: calc(1vw + 35px);
+}
+.header .text_box .title .wrap {
+    border-inline-end: 5px solid #666;
+    width: fit-content;
+    color: var(--primary);
+}
+.header .sec_img {
+    display: block;
+    animation: floating_y 3s infinite alternate;
+}
+
+@keyframes floating_y {
+    0% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+    100% {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+}
+
+/**********************************************
+   Start Edit skills-sec
+**********************************************/
+.skills-sec {
+    background-color: #32324C ;
+    /* padding-top: 0; */
+}
+
+.skills-sec  .skills_inner {
+    border-radius: 25px;
+    padding: 50px 2vw;
+    background-color: var(--secondary);
+    box-shadow: 0 25px 18px rgb(0 0 0 / 16%);
+
+}   
+
+.skills-sec .skills_item {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.skills-sec .skills_item .progress-bar {
+    background-color: #e76f62;
+}
+
+.skills-sec .react-multiple-carousel__arrow {
+    bottom: 0px;
+}
+
+.skills-sec .react-multiple-carousel__arrow--right {
+    right: 46%;
+}
+
+.skills-sec .react-multiple-carousel__arrow--left {
+    left: 46%;
+}
+
+
+/**********************************************
+   Start Edit projects-sec
+**********************************************/
+.projects-sec {
+    background-color: var(--secondary);
+
+}
+.projects-sec .nav-link {
+    background-color: #f5f5f5 !important;
+    border-radius: 25px !important;
+    padding: .9rem 1.5rem;
+    margin: 0 7px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    min-width: 150px !important;
+    color: #333 !important;
+
+}
+.projects-sec .nav-link.active {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+}
+.projects-sec .proj_card {
+    position: relative;
+    border-radius: 20px;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.projects-sec .proj_card .img_card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projects-sec .proj_card  .proj_name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all .3s linear;
+    z-index: 5;
+    background: var(--primary);
+    margin-bottom: 0;
+    padding: 20px 5px;
+    font-size: 1.25rem;
+}
+.projects-sec .proj_card:hover .proj_name {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/**********************************************
+   Start Edit contact-sec
+**********************************************/
+.contact-sec {
+    background-image: linear-gradient(to right , #4E4F6E , #3C3B5A);
+    padding-bottom: 160px;
+}
+
+.contact-sec .contact_img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+.contact-sec .form_box  {
+    padding-inline-end: 2vw;
+}
+
+.contact-sec .form_box .form-control {
+    background-color: #33324d;
+    border-color: var(--secondary);
+    color: #fff;
+}
+
+.contact-sec .form_box .primary_butn {
+    min-width: 120px !important;
+}
+
+
+/**********************************************
+   Start Edit contact-sec
+**********************************************/
+.newsletter-sec {
+    background-color: #26263b;
+    overflow: unset;
+}
+
+.newsletter-sec .inner_box {
+    background-color: #e6f4ff;
+    padding: 70px 4vw;
+    border-radius: 20px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+.newsletter-sec .form-group {
+    position: relative;
+}
+.newsletter-sec .form-control {
+    background-color: #fff;
+    border-color: #fff;
+    height: 70px;
+    box-shadow: 3px 6px 10px 0 #0001;
+}
+
+.newsletter-sec  .butn {
+    border-radius: 10px;
+    position: absolute;
+    inset-inline-end: 12px;
+    top: 12px;
+}
+
+
+/**********************************************
+   Start Edit footer
+**********************************************/
+.footer {
+    background-color: #26263b;
+    padding-bottom: 150px;
+}
+
+.footer .social_links a {    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-end: 7px;
+}
+.footer .social_links a:hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: #fff !important;
+}
+
+.footer_b {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+/**********************************************
+   Start Edit Media 
+**********************************************/
+@media(max-width:768px)
+{
+    .header .sec_img {
+        height: 300px;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .header .text_box .title {
+        height: 145px;
+    }
+    .skills-sec .react-multiple-carousel__arrow--right {
+        right: 35%;
+    }
+    .skills-sec .react-multiple-carousel__arrow--left {
+        left: 35%;
+    }
+ 
